@@ -1,16 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h1> {{ $store.state.count }}</h1>
+<br/>
+<button @click="$store.commit('inc')">Add</button>
+<button @click="$store.commit('desc')">Sub</button>
+<br/>
+<button @click="$store.dispatch('callWithDelay')">Add with delay</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
+
 }
 </script>
 
